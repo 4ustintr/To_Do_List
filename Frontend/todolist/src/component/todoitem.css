@@ -1,0 +1,74 @@
+.ToDoItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.ItemContent {
+    margin-left: 10px;
+    width: 90%;
+}
+
+.Title {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin: 0;
+}
+
+.due_date {
+    font-size: 12px;
+    color: #888;
+    display: flex;
+    align-items: center;
+}
+
+.due_date.today {
+    color: #28a745;
+}
+
+.due_date.tomorrow {
+    color: #ffc107;
+}
+
+.due_date.overdue {
+    color: #dc3545; 
+}
+
+.ToDoItem input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.ToDoItem input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.ToDoItem input[type="checkbox"]:checked::before {
+    content: "\2713"; 
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Action * {
+    font-size: 16px;
+    color: #888;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.Action *:hover {
+    color: #007bff;
+}
